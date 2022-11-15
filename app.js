@@ -3,6 +3,7 @@ const express = require('express');
 
 const mongoose = require('mongoose');
 const authRoutes = require('./routes/authRoutes');
+const categoryRoutes = require('./routes/authRoutes')
 const cookieParser = require('cookie-parser')
 
 const app = express();
@@ -27,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 
-
+app.use(categoryRoutes);
 app.use(authRoutes);
 app.use((req, res) => {
     res.status(404).render('404');

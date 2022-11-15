@@ -1,12 +1,15 @@
-// const { application } = require('express');
+const { application } = require('express');
 // const { requireAuth, checkUser } = require('../middleware/authMiddleware');
 const express = require('express');
 // const { body, validationResult } = require("express-validator");
 const categoryController = require('../controllers/categoryController')
     //const authController = require('../controllers/authController');
-const router = express.Router();
+const cats = express.Router();
 
 
 
-router.get('/categories', categoryController.Category_get);
-router.post('/categories', categoryController.Add_category);
+cats.get('/categories', categoryController.Category_get);
+cats.post('/add-categories', categoryController.Add_category);
+
+
+module.exports = cats;
