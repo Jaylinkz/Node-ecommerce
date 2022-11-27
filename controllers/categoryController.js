@@ -40,6 +40,11 @@ module.exports.Delete_category = (req, res) => {
     });
 
 }
-module.exports.Update_category = () => {
+module.exports.Update_category = (req, res) => {
+
+const id = req.param
+
+})
+
 
 }
